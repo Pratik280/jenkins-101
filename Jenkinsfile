@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 cleanWs()
+                checkout scm
                 echo "Building.."
                 sh '''
                 cd myapp
