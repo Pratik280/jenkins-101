@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.."
+                cleanWs()
                 sh '''
                 cd myapp
                 python3 -m venv .venv
